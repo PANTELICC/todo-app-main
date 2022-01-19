@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Todo app</title>
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark">
+  <div class="header">
+    <div class="naslov">
+      <h1>Todo</h1>
+      <img src="./images/icon-sun.svg" alt="" class="theme">
+    </div>
+    <div class="unos">
+      <div class="check">
+        <img src="./images/icon-check.svg" alt="" class="checkimg">
+      </div>
+      <input type="text" placeholder="Create a new todo..." class="newTodo">
+    </div>
+  </div>
+  <ul class="list">
+
+  </ul>
+  <div class="view">
+    <p><span class="brojac" id="brojac">0</span> items left</p>
+    <div class="allbuttons1 ">
+      <p class="all" id="all">All</p>
+      <p class="active" id="active">Active</p>
+      <p class="completed" id="completed">Completed</p>
+    </div>
+    <p class="clear" id="clear">Clear Completed</p>
+  </div>
+  <div class="allbuttons2 ">
+    <p class="all" id="all">All</p>
+    <p class="active" id="active">Active</p>
+    <p class="completed"id="completed">Completed</p>
+  </div>
+  <p class="text">  Drag and drop to reorder list</p>
+  <script src="main.js"></script>
+</body>
+</html>

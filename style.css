@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+:root{
+    --Dark_Grayish_Blue: hsl(234, 11%, 52%);
+    --Very_Dark_Grayish_Blue: hsl(233, 14%, 35%);
+    --Bright_Blue: hsl(220, 98%, 61%);
+    --Check_Background: linear-gradient(hsl(192, 100%, 67%) ,hsl(280, 87%, 65%));
+}
+body,.dark{
+    --body: hsl(235, 21%, 11%);
+    --secondaryColor: hsl(236, 33%, 92%);
+    --border: hsl(233, 11%, 84%);
+    --bgtodo :hsl(235, 24%, 19%);
+}
+  .light{
+    --body: hsl(236, 33%, 92%);
+    --secondaryColor:hsl(235, 21%, 11%) ;
+    --border: hsl(236, 9%, 61%);
+    --bgtodo :hsl(0, 0%, 98%);
+  
+  }
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: 'Josefin Sans', sans-serif;
+    background: var(--body);
+}
+.header{
+    background: url(./images/bg-desktop-dark.jpg) no-repeat center center / cover;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.naslov{
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    width: 450px;
+    margin: auto ;
+    align-items: center;
+    margin-top: 100px;
+}
+.naslov img{
+    cursor: pointer;
+}
+.naslov h1{
+    text-transform: uppercase;
+    font-size: 40px;
+    letter-spacing: 10px;
+}
+.unos{
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+    background: var(--bgtodo);
+    align-items: center;
+    margin: auto;
+    padding: 15px;
+    border-radius: 5px;
+}
+.unos input{
+    font-size: 20px;
+    padding: 10px 15px;
+    width: 90%;
+    background: var(--bgtodo);
+    outline: 0;
+    border: 0;
+    color: var(--secondaryColor);
+}
+.check{
+    width: 20px;
+    border: 1px solid var(--border);
+    padding: 1%;
+    height: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    /*background:linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.check img{
+    width: 80%;
+    display:none;
+}
+.view{
+    background: var(--bgtodo);
+    color: var(--Dark_Grayish_Blue);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    width: 470px;
+    padding: 25px 30px ;
+    margin: auto;
+    margin-top: 20px;
+}
+.view .allbuttons1,.allbuttons2{
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+}
+.text{
+    color: var(--secondaryColor);
+    text-align: center;
+    margin: 50px 0;
+}
+
+.list{
+    margin: -20px auto;
+
+}
+.list li{
+    margin:auto;
+    height: 50px;
+    background-color: var(--bgtodo);
+    width: 510px;
+    list-style: none;   
+    color: var(--secondaryColor);
+    display: flex;
+    align-items: center;
+    padding: 10px ;
+    border-bottom: 1px solid var(--Very_Dark_Grayish_Blue);
+}
+.list li:nth-child(1){
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+.list li .check{
+    margin-right: 10px  ;
+}
+.all,.active,.completed,.clear{cursor: pointer;}
+.all:hover,.active:hover,.completed:hover,.clear:hover{
+    color: var(--Bright_Blue);
+}
+.close{
+    display: none;
+    margin: 0 0 0 auto; 
+    margin-right: 10px;
+    cursor: pointer;
+}
+.list li:hover .close{
+    display: block;
+}
+.allbuttons2{
+
+    width: 90%;
+    padding: 20px 10px;
+    margin: auto;
+    color: var(--Dark_Grayish_Blue);
+    background-color: var(--bgtodo);
+    border-radius: 5px;
+    margin-top: 30px;
+
+    display: none;
+}
+@media screen and (max-width:700px) {
+    .naslov{
+        width: 80%;
+    }
+    .unos{width: 90%;}
+    .view{
+        width: 90%;
+        padding: 20px 10px;
+    }
+    .list li{width: 90%;}
+    .view .allbuttons1{
+        display: none;
+    }
+    .allbuttons2{
+        display: flex;
+    }
+}
